@@ -1,0 +1,10 @@
+// Vitest Snapshot v1
+
+exports[`remarkCodeBlock > should add data-filename to code element 1`] = `"<pre><code class=\\"language-html\\" data-lang=\\"html\\" data-filename=\\"src/pages/hello.html\\"><span data-line-number=\\"1\\"><span class=\\"token tag\\"><span class=\\"token tag\\"><span class=\\"token punctuation\\">&#x3C;</span>p</span><span class=\\"token punctuation\\">></span></span>hello world<span class=\\"token tag\\"><span class=\\"token tag\\"><span class=\\"token punctuation\\">&#x3C;/</span>p</span><span class=\\"token punctuation\\">></span></span></span></code></pre>"`;
+
+exports[`remarkCodeBlock > should highlight code block 1`] = `
+"<pre><code class=\\"language-javascript\\" data-lang=\\"javascript\\"><span data-line-number=\\"1\\">console<span class=\\"token punctuation\\">.</span><span class=\\"token function\\">log</span><span class=\\"token punctuation\\">(</span><span class=\\"token string\\">'remark code block'</span><span class=\\"token punctuation\\">)</span><span class=\\"token punctuation\\">;</span>
+</span><span data-line-number=\\"2\\">
+</span><span data-line-number=\\"3\\">
+</span><span data-line-number=\\"4\\">console<span class=\\"token punctuation\\">.</span><span class=\\"token function\\">log</span><span class=\\"token punctuation\\">(</span><span class=\\"token string\\">'remark code block'</span><span class=\\"token punctuation\\">)</span><span class=\\"token punctuation\\">;</span></span></code></pre>"
+`;
