@@ -20,6 +20,19 @@
     ```
     </pre>
 
+## Use
+
+```js
+import {remark} from 'remark';
+import {remarkCodeBlock} from 'remark-code-block';
+import js from 'refractor/lang/javascript.js';
+
+// register any languages you want to apply syntax highlighting first
+remarkCodeBlock.register(js);
+
+remark().use(remarkCodeBlock);
+```
+
 ## Options
 
 | Option              | Type      | Default | Description                                                             |
