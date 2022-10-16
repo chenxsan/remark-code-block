@@ -7,7 +7,7 @@ import type { Properties } from 'hast'
 import { splitTextsByNewLine } from './splitTextsByNewLine.js'
 import rangeParser from 'parse-numeric-range'
 
-const { register } = refractor
+const { register, alias } = refractor
 
 interface Options {
   enableLineNumbers: boolean
@@ -89,6 +89,7 @@ export const remarkCodeBlock = <Tree extends Parent & Code>(
 }
 remarkCodeBlock.register = (lang: Parameters<typeof register>[0]) =>
   register(lang)
+remarkCodeBlock.alias = (lang: Parameters<typeof alias>[0]) => alias(lang)
 
 function parseLines(linesParam: string): number[] {
   const lines = linesParam.match(/^\[(.+)\]$/)
