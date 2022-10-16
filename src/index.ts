@@ -9,9 +9,9 @@ import rangeParser from 'parse-numeric-range'
 const { register, alias } = refractor
 
 export interface Options {
-  enableLineNumbers: boolean
+  enableLineNumbers?: boolean
 }
-export const remarkCodeBlock = <Tree extends Root>(options: Options) => {
+export const remarkCodeBlock = <Tree extends Root>(options: Options = {}) => {
   const { enableLineNumbers = true } = options
   const codeVisitor: BuildVisitor<Tree, 'code'> = (node) => {
     const languages = refractor.listLanguages()
