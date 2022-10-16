@@ -1,20 +1,17 @@
 import { visit } from 'unist-util-visit'
-import type { Parent } from 'unist'
 import { refractor, RefractorElement, Text } from 'refractor/lib/core.js'
 import type { BuildVisitor } from 'unist-util-visit/complex-types.js'
-import type { Code } from 'mdast'
+import type { Root } from 'mdast'
 import type { Properties } from 'hast'
 import { splitTextsByNewLine } from './splitTextsByNewLine.js'
 import rangeParser from 'parse-numeric-range'
 
 const { register, alias } = refractor
 
-interface Options {
+export interface Options {
   enableLineNumbers: boolean
 }
-export const remarkCodeBlock = <Tree extends Parent & Code>(
-  options: Options
-) => {
+export const remarkCodeBlock = <Tree extends Root>(options: Options) => {
   const { enableLineNumbers = true } = options
   const codeVisitor: BuildVisitor<Tree, 'code'> = (node) => {
     const languages = refractor.listLanguages()
