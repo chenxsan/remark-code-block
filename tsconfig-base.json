@@ -3,7 +3,9 @@
     "strict": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "moduleResolution": "NodeNext"
+    "moduleResolution": "NodeNext",
+    "declaration": true,
+    "declarationMap": true
   },
   "include": ["src/**/*.ts"],
   "exclude": ["src/**/*.test.ts"]

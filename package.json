@@ -9,6 +9,7 @@
       "require": "./lib/cjs/index.js"
     }
   },
+  "types": "./lib/mjs/index.d.ts",
   "scripts": {
     "test": "vitest run",
     "watch": "tsc -w -p ./tsconfig-mjs.json",
